@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:newapp/models/CategoryWidget.dart';
+import 'package:newapp/models/NewsTile.dart';
 import 'package:newapp/models/TextWidgetUpdated.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -28,6 +29,7 @@ class HomeScreen extends StatelessWidget {
       body: const Column(
         children: [
           CategoryRow(),
+          NewsTile(),
         ],
       ),
     );

@@ -2,38 +2,53 @@
 // ignore_for_file: file_names, duplicate_ignore
 
 import 'package:flutter/material.dart';
+import 'package:newapp/Components/comp.dart';
 import 'package:newapp/models/Category.dart';
 
 class CategoryRow extends StatelessWidget {
   const CategoryRow({super.key});
   final List<CategoryComp> comps = const [
     CategoryComp(
-      text: "Business",
-      image: "assets/business.avif",
+      comp: Comp(
+        text: "Business",
+        image: "assets/business.avif",
+      ),
     ),
     CategoryComp(
-      text: "Entertaiment",
-      image: "assets/entertaiment.avif",
+      comp: Comp(
+        text: "Entertaiment",
+        image: "assets/entertaiment.avif",
+      ),
     ),
     CategoryComp(
-      text: "general",
-      image: "assets/general.avif",
+      comp: Comp(
+        text: "general",
+        image: "assets/general.avif",
+      ),
     ),
     CategoryComp(
-      text: "health",
-      image: "assets/health.avif",
+      comp: Comp(
+        text: "health",
+        image: "assets/health.avif",
+      ),
     ),
     CategoryComp(
-      text: "science",
-      image: "assets/science.avif",
+      comp: Comp(
+        text: "science",
+        image: "assets/science.avif",
+      ),
     ),
     CategoryComp(
-      text: "sports",
-      image: "assets/sports.avif",
+      comp: Comp(
+        text: "sports",
+        image: "assets/sports.avif",
+      ),
     ),
     CategoryComp(
-      text: "technology",
-      image: "assets/technology.jpeg",
+      comp: Comp(
+        text: "technology",
+        image: "assets/technology.jpeg",
+      ),
     ),
   ];
 
