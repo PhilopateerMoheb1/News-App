@@ -9,31 +9,29 @@ class CategoryComp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Padding(
-        padding: const EdgeInsets.only(
-          right: 8,
-          left: 8,
-        ),
-        child: GestureDetector(
-          child: Container(
-            height: 110,
-            width: 110,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                fit: BoxFit.fill,
-                image: AssetImage(comp!.image!),
-              ),
-              borderRadius: BorderRadius.circular(8),
+    return Padding(
+      padding: const EdgeInsets.only(
+        right: 8,
+        left: 8,
+      ),
+      child: GestureDetector(
+        child: Container(
+          height: 110,
+          width: 110,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              fit: BoxFit.fill,
+              image: AssetImage(comp!.image!),
             ),
-            child: Center(
-              child: Text(
-                comp!.text!,
-                style: const TextStyle(
-                  fontSize: 14,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Center(
+            child: Text(
+              comp!.text!,
+              style: const TextStyle(
+                fontSize: 14,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
               ),
             ),
           ),
