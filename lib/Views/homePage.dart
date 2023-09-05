@@ -1,12 +1,9 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:newapp/Components/comp.dart';
-import 'package:newapp/models/AllNews.dart';
+import 'package:newapp/models/AllNewsBuilder.dart';
 import 'package:newapp/models/CategoryWidget.dart';
 import 'package:newapp/models/TextWidgetUpdated.dart';
-
-import '../models/NewsTile.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -30,12 +27,14 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       body: CustomScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         slivers: [
-          const SliverToBoxAdapter(
+          SliverToBoxAdapter(
             child: CategoryRow(),
           ),
-          AllNews(),
+          const AllNewsBuilder(
+            category: 'general',
+          ),
         ],
       ),
     );

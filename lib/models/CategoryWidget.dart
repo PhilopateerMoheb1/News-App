@@ -6,45 +6,45 @@ import 'package:newapp/Components/comp.dart';
 import 'package:newapp/models/Category.dart';
 
 class CategoryRow extends StatelessWidget {
-  const CategoryRow({super.key});
-  final List<CategoryComp> comps = const [
-    CategoryComp(
+  CategoryRow({super.key});
+  final List<CategoryComp> comps = [
+    const CategoryComp(
       comp: Comp(
         text: "Business",
         image: "assets/business.avif",
       ),
     ),
-    CategoryComp(
+    const CategoryComp(
       comp: Comp(
         text: "Entertaiment",
         image: "assets/entertaiment.avif",
       ),
     ),
-    CategoryComp(
+    const CategoryComp(
       comp: Comp(
         text: "general",
         image: "assets/general.avif",
       ),
     ),
-    CategoryComp(
+    const CategoryComp(
       comp: Comp(
         text: "health",
         image: "assets/health.avif",
       ),
     ),
-    CategoryComp(
+    const CategoryComp(
       comp: Comp(
         text: "science",
         image: "assets/science.avif",
       ),
     ),
-    CategoryComp(
+    const CategoryComp(
       comp: Comp(
         text: "sports",
         image: "assets/sports.avif",
       ),
     ),
-    CategoryComp(
+    const CategoryComp(
       comp: Comp(
         text: "technology",
         image: "assets/technology.jpeg",

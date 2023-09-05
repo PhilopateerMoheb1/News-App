@@ -3,8 +3,13 @@
 import 'package:flutter/material.dart';
 import 'package:newapp/Components/comp.dart';
 
+import '../Views/CategoryView.dart';
+
 class CategoryComp extends StatelessWidget {
-  const CategoryComp({super.key, this.comp});
+  const CategoryComp({
+    super.key,
+    this.comp,
+  });
   final Comp? comp;
 
   @override
@@ -15,6 +20,13 @@ class CategoryComp extends StatelessWidget {
         left: 8,
       ),
       child: GestureDetector(
+        onTap: () {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+            return CategoryView(
+              category: comp!.text!,
+            );
+          }));
+        },
         child: Container(
           height: 110,
           width: 110,

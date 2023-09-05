@@ -1,35 +1,24 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:newapp/Views/ContentView.dart';
 
 import '../Components/News.dart';
 
-class NewsTile extends StatelessWidget {
-  const NewsTile({
-    super.key,
-    required this.news,
-  });
-  final News news;
+class ContentBuilder extends StatelessWidget {
+  const ContentBuilder({super.key, this.news});
+  final News? news;
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-          return ContentView(
-            news: news,
-          );
-        }));
-      },
+    return SliverToBoxAdapter(
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(7),
-            child: news.urlToimage != null
+            child: news!.urlToimage != null
                 ? Image.network(
-                    news.urlToimage!,
+                    news!.urlToimage!,
                     width: double.infinity,
                     height: 200,
                     fit: BoxFit.cover,
@@ -40,7 +29,7 @@ class NewsTile extends StatelessWidget {
             height: 12,
           ),
           Text(
-            news.title ?? " ",
+            news!.title ?? " ",
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             style: const TextStyle(
@@ -53,7 +42,7 @@ class NewsTile extends StatelessWidget {
             height: 8,
           ),
           Text(
-            news.description ?? " ",
+            news!.content ?? " ",
             maxLines: 3,
             overflow: TextOverflow.ellipsis,
             style: const TextStyle(
