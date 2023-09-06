@@ -14,6 +14,21 @@ class ContentBuilder extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
+          const SizedBox(
+            height: 20,
+          ),
+          Center(
+            child: Text(
+              news!.title ?? " ",
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(
+                color: Colors.black,
+                fontSize: 15,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ),
           ClipRRect(
             borderRadius: BorderRadius.circular(7),
             child: news!.urlToimage != null
@@ -28,27 +43,16 @@ class ContentBuilder extends StatelessWidget {
           const SizedBox(
             height: 12,
           ),
-          Text(
-            news!.title ?? " ",
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-            style: const TextStyle(
-              color: Colors.black,
-              fontSize: 20,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
-          const SizedBox(
-            height: 8,
-          ),
-          Text(
-            news!.content ?? " ",
-            maxLines: 3,
-            overflow: TextOverflow.ellipsis,
-            style: const TextStyle(
-              color: Colors.grey,
-              fontSize: 10,
-              fontWeight: FontWeight.w500,
+          SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Text(
+              news!.content ?? " ",
+              softWrap: true,
+              style: const TextStyle(
+                color: Colors.black,
+                fontSize: 20,
+                fontWeight: FontWeight.w500,
+              ),
             ),
           ),
         ],

@@ -15,6 +15,13 @@ class ContentView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+            color: Colors.black,
+            icon: const Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+          ),
           elevation: 0,
           backgroundColor: Colors.transparent,
           centerTitle: true,
@@ -32,9 +39,6 @@ class ContentView extends StatelessWidget {
         body: CustomScrollView(
           physics: const BouncingScrollPhysics(),
           slivers: [
-            SliverToBoxAdapter(
-              child: CategoryRow(),
-            ),
             ContentBuilder(
               news: news,
             ),

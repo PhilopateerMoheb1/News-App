@@ -16,7 +16,7 @@ class CategoryRow extends StatelessWidget {
     ),
     const CategoryComp(
       comp: Comp(
-        text: "Entertaiment",
+        text: "entertainment",
         image: "assets/entertaiment.avif",
       ),
     ),
